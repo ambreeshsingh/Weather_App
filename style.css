@@ -1,0 +1,10 @@
+
+.tab.current-tab{
+    background-color: rgb(219,226,239,0.5);
+}
+
+.form-container.active{
+    opacity:1;
+    display: flex;
+
+}
