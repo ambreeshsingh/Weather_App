@@ -6,6 +6,7 @@ const grantAcessContainer=document.querySelector(".grant-location-container");
 const searchform=document.querySelector("[data-searchForm]");
 const loadingScreen=document.querySelector(".loading-container");
 const userInfoContainer=document.querySelector(".user-info-container");
+const er=document.querySelector("errr");
 
 
 // initailayy variable need
@@ -144,10 +145,10 @@ cityname.innerText=weatherinfo?.name;
 countryicon.src = `https://flagcdn.com/144x108/${weatherinfo?.sys?.country.toLowerCase()}.png`;
 desc.innerText=weatherinfo?.weather?.[0]?.description;
 weathericon.src = `https://openweathermap.org/img/wn/${weatherinfo?.weather?.[0]?.icon}@2x.png`;
-windspeed.innerText=weatherinfo?.wind?.speed;
+windspeed.innerText=`${weatherinfo?.wind?.speed} m/s`;
 temp.innerText = `${(weatherinfo.main.temp - 273.15).toFixed(1)}°C`;
-humidity.innerText = weatherinfo?.main?.humidity;  
-cloudiness.innerText=weatherinfo?.clouds?.all;
+humidity.innerText = `${weatherinfo?.main?.humidity}%`;  
+cloudiness.innerText=`${weatherinfo?.clouds?.all}%`;
 
 }
 
@@ -199,9 +200,11 @@ async function fetchCityweatherInfo(cityname){
   renderweatherinfo(data);
 
     }
-   
+    
     catch(error){
-        //
+        userInfoContainer.classList.remove("active");
+        er.classList.add("active");
+        
 
     }
 
