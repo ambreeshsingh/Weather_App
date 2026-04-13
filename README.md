@@ -1,16 +1,17 @@
-Weather App
+# 🌤️ Weather App
 
-Live Project: https://weather-app-plum-alpha-35.vercel.app
+Live Project: [weather-app-plum-alpha-35.vercel.app](https://weather-app-plum-alpha-35.vercel.app)
 
-Features
-Search weather by city name
-Shows temperature, humidity, and weather condition
-Clean and responsive UI
-Real-time data from Weather API
+## Features
+- Search weather by city name
+- Shows temperature, humidity, wind speed & cloudiness
+- Grant location access for your local weather
+- Clean and responsive UI
+- Real-time data from OpenWeatherMap API
 
-Tech Stack
-HTML
-CSS
-Javascript
-Weather API
-Vercel (for deployment)
+## Tech Stack
+- HTML
+- CSS
+- JavaScript
+- OpenWeatherMap API
+- Vercel (Deployment)
